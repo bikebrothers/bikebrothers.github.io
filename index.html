@@ -37,23 +37,5 @@
     <footer>
         <p>&copy; 2024 Bike Brothers. All rights reserved.</p>
     </footer>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('appear');
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, {
-                threshold: 0.1
-            });
-
-            document.querySelectorAll('.section, .hero').forEach(section => {
-                observer.observe(section);
-            });
-        });
-    </script>
 </body>
 </html>
